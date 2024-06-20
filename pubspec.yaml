@@ -1,7 +1,14 @@
 name: animated_progress
-description: "A new Flutter package project."
+description: "Flutter Beautiful Loading"
 version: 0.0.1
-homepage:
+homepage: https://github.com/edris-mazhari/animated_progress/
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  web:
+  windows:
 
 environment:
   sdk: '>=3.3.3 <4.0.0'

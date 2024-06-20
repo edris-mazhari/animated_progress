@@ -12,8 +12,10 @@ class AnimatedProgress {
   Widget linear({
     required double width,
     required double height,
-    required double value,
+    double value = 0,
+    double secondaryValue = 0,
     Color valueColor = Colors.green,
+    Color secondaryValueColor = Colors.lightGreen,
     Color backgroundColor = Colors.white,
     BoxShadow? boxShadow,
     Border? border,
@@ -22,6 +24,8 @@ class AnimatedProgress {
     LinearDirection direction = LinearDirection.leftToRight,
   }) {
     double realValue = 0;
+    double secondaryRealValue = 0;
+
     if (value < 0) {
       realValue = 0;
     } else if (value > 1) {
@@ -29,7 +33,15 @@ class AnimatedProgress {
     } else {
       realValue = value;
     }
+    if (secondaryValue < 0) {
+      secondaryRealValue = 0;
+    } else if (secondaryValue > 1) {
+      secondaryRealValue = 1;
+    } else {
+      secondaryRealValue = secondaryValue;
+    }
     double valueWidth = width * realValue;
+    double secondaryValueWidth = width * secondaryRealValue;
     return Column(
       children: [
         ClipRRect(
@@ -55,6 +67,19 @@ class AnimatedProgress {
                       left: direction == LinearDirection.leftToRight ? 0 : null,
                       right: direction == LinearDirection.righToLeft ? 0 : null,
                       child: AnimatedContainer(
+                        width: secondaryValueWidth,
+                        duration: valueAnimationDuration,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(borderRadius),
+                          color: secondaryValueColor,
+                        ),
+                      )),
+                  Positioned(
+                      top: 0,
+                      bottom: 0,
+                      left: direction == LinearDirection.leftToRight ? 0 : null,
+                      right: direction == LinearDirection.righToLeft ? 0 : null,
+                      child: AnimatedContainer(
                         width: valueWidth,
                         duration: valueAnimationDuration,
                         decoration: BoxDecoration(
@@ -71,7 +96,6 @@ class AnimatedProgress {
 
   Widget circular(
       {bool? isSpining,
-      bool? hasSpinReverse,
       double? value,
       double? valueWidth,
       Color? secondaryColor,
@@ -96,7 +120,6 @@ class AnimatedProgress {
       valueWidth: valueWidth,
       spinDuration: spinDuration,
       width: width,
-      hasSpinReverse: hasSpinReverse,
       backgrounShape: backgroundShape,
       backgroundBorder: backgroundBorder,
       backgroundColor: backgroundColor,
@@ -116,7 +139,6 @@ class AnimatedCircularProgress extends StatefulWidget {
       this.secondaryWidth,
       this.value,
       this.height,
-      this.hasSpinReverse,
       this.width,
       this.spinDuration,
       this.backgrounShape,
@@ -127,7 +149,6 @@ class AnimatedCircularProgress extends StatefulWidget {
       this.backgroundBorder,
       super.key});
   final bool? isSpining;
-  final bool? hasSpinReverse;
   final double? value;
   final Color? valueColor;
   final double? valueWidth;

@@ -1,39 +1,87 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+Load your data more beautiful.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+## Installation
 
-## Features
+You just need to add ```animated_progress``` as a dependency in your pubspec.yaml file.
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+```dart
+dependencies:
+  animated_progress: ^0.0.1
+```
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+All features you can use :<br><br>
 
-## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+
+
 
 ```dart
-const like = 'sample';
+AnimatedProgress().circular(
+                    isSpining: true,
+                    value: .5, // The value of progrees. Default is 0.5
+                    backgroundColor: Colors.green.shade100, // Background color
+                    valueColor: Colors.green.shade900, // Progress color
+                  ),
 ```
 
-## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+
+ 
+```dart
+AnimatedProgress().circular(
+                    isSpining: true,
+                    value: .5, // The value of progrees. Default is 0.5
+                    valueColor: Colors.green.shade900, // Progress color
+                    secondaryWidth : 5 , // Secondary width
+                    secondaryColor :Colors.green.shade500, // Secondary color
+                  ),
+```
+
+## Other Circular Progress Features
+
+```dart
+spinDuration  // Animation Duration
+backgroundBorder // You Can Set Border With Your Customization
+backgroundShape // Background Shape : BoxShape.rectangle
+backgroundRadius // This Feature Only Works With BoxShape.rectangle
+```
+
+
+
+```dart
+AnimatedProgress().linear(
+    height: 10,
+    width: MediaQuery.of(context).size.width,
+    value: .5, // The value of progrees. Default is 0.5
+    valueColor: Colors.green.shade900,// Progress color
+    backgroundColor: Colors.green.shade100, // Background color
+    ),
+```
+
+
+
+
+```dart
+AnimatedProgress().linear(
+    height: 10,
+    width: MediaQuery.of(context).size.width * .8,
+    value: .5, // The value of progrees. Default is 0.5
+    valueColor: Colors.green.shade900,// Progress color
+    backgroundColor: Colors.green.shade100, // Background color
+    secondaryValue: .7,// The value of progrees. Default is 0
+    secondaryValueColor: fgColor.withAlpha(100), // Progress color
+    ),
+```
+
+## Other Linear Progress Features
+
+```dart
+boxShadow  // You Can Set Shadow
+border // You Can Set Border With Your Customization
+valueAnimationDuration // Duration Of Animation
+direction // Use LinearDirection.leftToRight Or LinearDirection.rightToLeft
+```
