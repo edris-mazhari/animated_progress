@@ -15,9 +15,12 @@ dependencies:
 
 All features you can use :<br><br>
 
+![full](https://github.com/edris-mazhari/animated_progress/assets/91206674/9edb61db-1c38-4f44-a7ed-e5e9b2390a6f)
 
 
+## How To Use
 
+![first](https://github.com/edris-mazhari/animated_progress/assets/91206674/628d0ec4-cc45-4862-9209-86b6838f7898)
 
 ```dart
 AnimatedProgress().circular(
@@ -28,9 +31,8 @@ AnimatedProgress().circular(
                   ),
 ```
 
+![second](https://github.com/edris-mazhari/animated_progress/assets/91206674/0233fd35-f82d-46f6-93f2-09ae51ab0a1d)
 
-
- 
 ```dart
 AnimatedProgress().circular(
                     isSpining: true,
@@ -50,6 +52,7 @@ backgroundShape // Background Shape : BoxShape.rectangle
 backgroundRadius // This Feature Only Works With BoxShape.rectangle
 ```
 
+![thirdAndForth](https://github.com/edris-mazhari/animated_progress/assets/91206674/c4635689-360b-45a5-81f0-ceef7e7b457e)
 
 
 ```dart
@@ -61,9 +64,7 @@ AnimatedProgress().linear(
     backgroundColor: Colors.green.shade100, // Background color
     ),
 ```
-
-
-
+## Linear With Secondary Value
 
 ```dart
 AnimatedProgress().linear(
