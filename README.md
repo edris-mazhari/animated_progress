@@ -15,12 +15,12 @@ dependencies:
 
 All features you can use :<br><br>
 
-![full](https://github.com/edris-mazhari/animated_progress/assets/91206674/9edb61db-1c38-4f44-a7ed-e5e9b2390a6f)
+![full](https://github.com/edris-mazhari/animated_progress/assets/91206674/5e78983c-a850-4104-86da-aaa27e01401f)
 
 
 ## How To Use
 
-![first](https://github.com/edris-mazhari/animated_progress/assets/91206674/628d0ec4-cc45-4862-9209-86b6838f7898)
+![first](https://github.com/edris-mazhari/animated_progress/assets/91206674/1c25ccc8-a37c-40c3-8055-59e0097a69f8)
 
 ```dart
 AnimatedProgress().circular(
@@ -31,7 +31,7 @@ AnimatedProgress().circular(
                   ),
 ```
 
-![second](https://github.com/edris-mazhari/animated_progress/assets/91206674/0233fd35-f82d-46f6-93f2-09ae51ab0a1d)
+![second](https://github.com/edris-mazhari/animated_progress/assets/91206674/7d0694ad-e0b0-46b6-bb10-f612c95bed59)
 
 ```dart
 AnimatedProgress().circular(
@@ -52,8 +52,7 @@ backgroundShape // Background Shape : BoxShape.rectangle
 backgroundRadius // This Feature Only Works With BoxShape.rectangle
 ```
 
-![thirdAndForth](https://github.com/edris-mazhari/animated_progress/assets/91206674/c4635689-360b-45a5-81f0-ceef7e7b457e)
-
+![thirdandforth](https://github.com/edris-mazhari/animated_progress/assets/91206674/d5a0871d-a1ea-4db1-bbb3-770fe644f50a)
 
 ```dart
 AnimatedProgress().linear(
