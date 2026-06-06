@@ -1,6 +1,6 @@
 A beautifully animated progress library for Flutter — smooth linear & circular progress bars with gradients, spinning, value transitions, and programmatic control.
 
-![Demo](screenshots/demo.gif)
+![Demo](https://raw.githubusercontent.com/edris-mazhari/animated_progress/main/screenshots/demo.gif)
 
 ---
 
