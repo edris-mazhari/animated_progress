@@ -1,6 +1,6 @@
 name: animated_progress
 description: A beautifully animated progress library for Flutter — smooth linear & circular progress bars with gradients, spinning, value transitions, and programmatic control.
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/edris-mazhari/animated_progress/
 
 platforms:
